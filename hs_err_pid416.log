@@ -1,0 +1,1006 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000001373a73f325, pid=416, tid=5860
+#
+# JRE version: Java(TM) SE Runtime Environment (19.0.2+7) (build 19.0.2+7-44)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (19.0.2+7-44, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# J 1050% c2 jeuxEchecs.IA.evaluerPlateau([[LjeuxEchecs/Piece;Z)I JeuxEchecs (116 bytes) @ 0x000001373a73f325 [0x000001373a73f0c0+0x0000000000000265]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=C:\Users\ayaza\Desktop\Eclipse\JeuxEchecs\bin -XX:+ShowCodeDetailsInExceptionMessages -Djdk.module.main=JeuxEchecs JeuxEchecs/jeuxEchecs.PlateauEchecsPanel
+
+Host: Intel(R) Celeron(R) N4020 CPU @ 1.10GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Wed Dec  6 17:35:17 2023 Paris, Madrid elapsed time: 11.005213 seconds (0d 0h 0m 11s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001374afb9b60):  JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=5860, stack(0x0000002d11f00000,0x0000002d12000000)]
+
+Stack: [0x0000002d11f00000,0x0000002d12000000],  sp=0x0000002d11ffe680,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x000001373a73f325
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x00000004c300007c
+
+
+Registers:
+RAX=0x0000000000000004, RBX=0x0000000000000003, RCX=0x00000000ffffffff, RDX=0x0000000000000005
+RSP=0x0000002d11ffe680, RBP=0x0000000000000384, RSI=0x0000000000000004, RDI=0x00000000c3000070
+R8 =0x0000000000000000, R9 =0x00000000ffffffff, R10=0x00000000c3073448, R11=0x00000000fffffbd2
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x0000000000000008, R15=0x000001374afb9b60
+RIP=0x000001373a73f325, EFLAGS=0x0000000000010286
+
+
+Register to memory mapping:
+
+RIP=0x000001373a73f325 is at entry_point+613 in (nmethod*)0x000001373a73ef10
+Compiled method (c2)   11041 1050 %     4       jeuxEchecs.IA::evaluerPlateau @ 13 (116 bytes)
+ total in heap  [0x000001373a73ef10,0x000001373a73fdb8] = 3752
+ relocation     [0x000001373a73f070,0x000001373a73f0b8] = 72
+ main code      [0x000001373a73f0c0,0x000001373a73f820] = 1888
+ stub code      [0x000001373a73f820,0x000001373a73f838] = 24
+ oops           [0x000001373a73f838,0x000001373a73f848] = 16
+ metadata       [0x000001373a73f848,0x000001373a73f888] = 64
+ scopes data    [0x000001373a73f888,0x000001373a73fbb8] = 816
+ scopes pcs     [0x000001373a73fbb8,0x000001373a73fd48] = 400
+ dependencies   [0x000001373a73fd48,0x000001373a73fd58] = 16
+ nul chk table  [0x000001373a73fd58,0x000001373a73fdb8] = 96
+RAX=0x0000000000000004 is an unknown value
+RBX=0x0000000000000003 is an unknown value
+RCX=0x00000000ffffffff is an unallocated location in the heap
+RDX=0x0000000000000005 is an unknown value
+RSP=0x0000002d11ffe680 is pointing into the stack for thread: 0x000001374afb9b60
+RBP=0x0000000000000384 is an unknown value
+RSI=0x0000000000000004 is an unknown value
+RDI=0x00000000c3000070 is an oop: [[LjeuxEchecs.Piece; 
+{0x00000000c3000070} - klass: 'jeuxEchecs/Piece'[][]
+ - length: 8
+R8 =0x0 is NULL
+R9 =0x00000000ffffffff is an unallocated location in the heap
+R10=0x00000000c3073448 is an oop: jeuxEchecs.Piece 
+{0x00000000c3073448} - klass: 'jeuxEchecs/Piece'
+ - ---- fields (total size 3 words):
+ - private 'estBlanc' 'Z' @12  false
+ - private 'image' 'Ljavax/swing/ImageIcon;' @16  a 'javax/swing/ImageIcon'{0x00000000c3073460} (c3073460)
+ - private 'type' 'LjeuxEchecs/TypePiece;' @20  a 'jeuxEchecs/TypePiece'{0x00000000c2ef6598} (c2ef6598)
+R11=0x00000000fffffbd2 is an unallocated location in the heap
+R12=0x0 is NULL
+R13=0x0 is NULL
+R14=0x0000000000000008 is an unknown value
+R15=0x000001374afb9b60 is a thread
+
+
+Top of Stack: (sp=0x0000002d11ffe680)
+0x0000002d11ffe680:   00000137470236e0 0000013747302378
+0x0000002d11ffe690:   00000000c2ef6490 0000013747007f08
+0x0000002d11ffe6a0:   0000000000000008 0000002d00000001
+0x0000002d11ffe6b0:   0000002d11ffea70 0000013732dff95c
+0x0000002d11ffe6c0:   000000000000005a 00000000c3073490
+0x0000002d11ffe6d0:   0000000000000004 0000000000000000
+0x0000002d11ffe6e0:   00000000ffffff56 0000000000000001
+0x0000002d11ffe6f0:   0000002d11ffea70 0000013732dff95c
+0x0000002d11ffe700:   ffffffffffffffff 0000013747007ce8
+0x0000002d11ffe710:   00000000c6970300 00000000c3000070
+0x0000002d11ffe720:   00000000c6831fd8 00000000c6831988
+0x0000002d11ffe730:   00000000c3072fe0 0000013747302838
+0x0000002d11ffe740:   0000000000000003 000001373a73d4d4
+0x0000002d11ffe750:   0000000000000003 0000013747007ce8
+0x0000002d11ffe760:   0000000000000120 0000000000000001
+0x0000002d11ffe770:   00000000c3000070 00000000c685a848 
+
+Instructions: (pc=0x000001373a73f325)
+0x000001373a73f225:   e9 08 ff ff ff 41 83 fb 06 0f 8f f0 03 00 00 41
+0x000001373a73f235:   bb e2 ff ff ff bd 1e 00 00 00 e9 ee fe ff ff 45
+0x000001373a73f245:   8b d5 41 ff c2 44 3b d2 0f 8d 26 02 00 00 44 3b
+0x000001373a73f255:   d2 0f 83 6c 03 00 00 46 8b 44 93 10 45 8b 58 0c
+0x000001373a73f265:   45 85 db 0f 86 20 02 00 00 33 f6 45 8b ea e9 f6
+0x000001373a73f275:   fe ff ff 66 0f 7e d3 e9 1e 01 00 00 ff c1 4d 8b
+0x000001373a73f285:   8f 80 03 00 00 41 85 01 83 f9 01 7e 77 41 8b fb
+0x000001373a73f295:   66 48 0f 7e c3 44 8b 6c 24 4c 66 41 0f 7e d1 66
+0x000001373a73f2a5:   0f 7e d9 8b 54 24 20 e9 9f fe ff ff 85 d2 0f 86
+0x000001373a73f2b5:   27 04 00 00 8b 43 10 44 8b 70 0c 89 54 24 20 66
+0x000001373a73f2c5:   0f 6e d9 66 41 0f 6e d1 44 89 6c 24 4c 66 48 0f
+0x000001373a73f2d5:   6e c3 4d 63 ce 48 63 c6 48 8b d8 48 ff cb 49 3b
+0x000001373a73f2e5:   d9 0f 83 e8 03 00 00 48 8b d0 48 83 c2 01 49 3b
+0x000001373a73f2f5:   d1 0f 83 df 03 00 00 4d 8b ca 66 49 0f 6e c9 b9
+0x000001373a73f305:   ff ff ff ff 85 c9 75 0b 41 b9 ff ff ff ff e9 b4
+0x000001373a73f315:   00 00 00 44 8b c9 44 03 4c 24 4c 66 48 0f 7e c7
+0x000001373a73f325:   46 8b 6c 8f 10 41 8b 7d 0c 48 63 ff 48 3b df 0f
+0x000001373a73f335:   83 a6 02 00 00 48 3b d7 0f 83 9d 02 00 00 44 3b
+0x000001373a73f345:   4c 24 20 0f 83 33 ff ff ff 45 8b 4c b5 0c 45 85
+0x000001373a73f355:   c9 74 0e 41 0f b6 69 0c 41 3b e8 0f 85 b3 00 00
+0x000001373a73f365:   00 45 8b 4c b5 10 45 85 c9 74 0e 41 0f b6 69 0c
+0x000001373a73f375:   41 3b e8 0f 85 fa fe ff ff 45 8b 4c 85 14 45 85
+0x000001373a73f385:   c9 0f 84 f5 fe ff ff 41 0f b6 69 0c 41 3b e8 0f
+0x000001373a73f395:   84 e7 fe ff ff bb 01 00 00 00 66 0f 6e db eb 74
+0x000001373a73f3a5:   45 33 c9 0f 1f 84 00 00 00 00 00 49 8b 8f 80 03
+0x000001373a73f3b5:   00 00 41 ff c1 85 01 41 83 f9 01 7e 0a b9 01 00
+0x000001373a73f3c5:   00 00 e9 b7 fe ff ff 45 85 c9 74 d4 8b 4c 24 4c
+0x000001373a73f3d5:   85 c9 7c d7 3b 4c 24 20 7d d1 41 8b f9 03 fe 41
+0x000001373a73f3e5:   3b fe 0f 83 a3 02 00 00 66 48 0f 7e c5 8b 6c 8d
+0x000001373a73f3f5:   10 8b 4d 0c 3b f9 0f 83 5b 02 00 00 8b 7c bd 10
+0x000001373a73f405:   85 ff 74 a7 0f b6 6f 0c 41 3b e8 74 9e 66 41 0f
+0x000001373a73f415:   6e d9 33 c9 ba 45 ff ff ff 44 8b 4c 24 4c 44 89 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x00000137470236e0 is pointing into metadata
+stack at sp + 1 slots: 0x0000013747302378 is pointing into metadata
+stack at sp + 2 slots: 0x00000000c2ef6490 is an oop: java.lang.Class 
+{0x00000000c2ef6490} - klass: 'java/lang/Class'
+ - ---- fields (total size 15 words):
+ - private volatile transient 'classRedefinedCount' 'I' @12  0
+ - abstract internal 'klass' 'J' @16  34376529488 (1003650 8)
+ - abstract internal 'array_klass' 'J' @24  0 (0 0)
+ - abstract internal 'oop_size' 'I' @32  15 (f)
+ - abstract internal 'static_oop_field_count' 'I' @36  1
+ - private volatile transient 'cachedConstructor' 'Ljava/lang/reflect/Constructor;' @40  NULL (0)
+ - private transient 'name' 'Ljava/lang/String;' @44  "jeuxEchecs.IA"{0x00000000c3075c70} (c3075c70)
+ - private transient 'module' 'Ljava/lang/Module;' @48  a 'java/lang/Module'{0x00000000c3022a98} (c3022a98)
+ - private final 'classLoader' 'Ljava/lang/ClassLoader;' @52  a 'jdk/internal/loader/ClassLoaders$AppClassLoader'{0x00000000c2ef6400} (c2ef6400)
+ - private transient 'classData' 'Ljava/lang/Object;' @56  NULL (0)
+ - private transient 'packageName' 'Ljava/lang/String;' @60  "jeuxEchecs"{0x00000000c3011070} (c3011070)
+ - private final 'componentType' 'Ljava/lang/Class;' @64  NULL (0)
+ - private volatile transient 'reflectionData' 'Ljava/lang/ref/SoftReference;' @68  NULL (0)
+ - private volatile transient 'genericInfo' 'Lsun/reflect/generics/repository/ClassRepository;' @72  NULL (0)
+ - private volatile transient 'enumConstants' '[Ljava/lang/Object;' @76  NULL (0)
+ - private volatile transient 'enumConstantDirectory' 'Ljava/util/Map;' @80  NULL (0)
+ - private volatile transient 'annotationData' 'Ljava/lang/Class$AnnotationData;' @84  NULL (0)
+ - private volatile transient 'annotationType' 'Lsun/reflect/annotation/AnnotationType;' @88  NULL (0)
+ - transient 'classValueMap' 'Ljava/lang/ClassValue$ClassValueMap;' @92  NULL (0)
+ - abstract internal 'protection_domain' 'Ljava/lang/Object;' @96  a 'java/security/ProtectionDomain'{0x00000000c2ef6468} (c2ef6468)
+ - abstract internal 'signers_name' 'Ljava/lang/Object;' @100  NULL (0)
+ - abstract internal 'source_file' 'Ljava/lang/Object;' @104  NULL (0)
+ - signature: LjeuxEchecs/IA;
+ - ---- static fields (1):
+ - private static volatile synthetic '$SWITCH_TABLE$jeuxEchecs$TypePiece' '[I' @112  [I{0x00000000c5f522a0} (c5f522a0)
+stack at sp + 3 slots: {method} {0x0000013747007f10} 'evaluerPlateau' '([[LjeuxEchecs/Piece;Z)I' in 'jeuxEchecs/IA'
+stack at sp + 4 slots: 0x0000000000000008 is an unknown value
+stack at sp + 5 slots: 0x0000002d00000001 is an unknown value
+stack at sp + 6 slots: 0x0000002d11ffea70 is pointing into the stack for thread: 0x000001374afb9b60
+stack at sp + 7 slots: 0x0000013732dff95c is at entry_point+4348 in (nmethod*)0x0000013732dfe590
+Compiled method (c1)   11085 1045       3       jeuxEchecs.IA::minMax (243 bytes)
+ total in heap  [0x0000013732dfe590,0x0000013732e003b8] = 7720
+ relocation     [0x0000013732dfe6f0,0x0000013732dfe860] = 368
+ main code      [0x0000013732dfe860,0x0000013732dffcc0] = 5216
+ stub code      [0x0000013732dffcc0,0x0000013732dffd58] = 152
+ oops           [0x0000013732dffd58,0x0000013732dffd60] = 8
+ metadata       [0x0000013732dffd60,0x0000013732dffda8] = 72
+ scopes data    [0x0000013732dffda8,0x0000013732dffff8] = 592
+ scopes pcs     [0x0000013732dffff8,0x0000013732e00318] = 800
+ dependencies   [0x0000013732e00318,0x0000013732e00320] = 8
+ nul chk table  [0x0000013732e00320,0x0000013732e003b8] = 152
+
+
+Compiled method (c2)   11087 1050 %     4       jeuxEchecs.IA::evaluerPlateau @ 13 (116 bytes)
+ total in heap  [0x000001373a73ef10,0x000001373a73fdb8] = 3752
+ relocation     [0x000001373a73f070,0x000001373a73f0b8] = 72
+ main code      [0x000001373a73f0c0,0x000001373a73f820] = 1888
+ stub code      [0x000001373a73f820,0x000001373a73f838] = 24
+ oops           [0x000001373a73f838,0x000001373a73f848] = 16
+ metadata       [0x000001373a73f848,0x000001373a73f888] = 64
+ scopes data    [0x000001373a73f888,0x000001373a73fbb8] = 816
+ scopes pcs     [0x000001373a73fbb8,0x000001373a73fd48] = 400
+ dependencies   [0x000001373a73fd48,0x000001373a73fd58] = 16
+ nul chk table  [0x000001373a73fd58,0x000001373a73fdb8] = 96
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Verified Entry Point]
+  # {method} {0x0000013747007f10} 'evaluerPlateau' '([[LjeuxEchecs/Piece;Z)I' in 'jeuxEchecs/IA'
+  0x000001373a73f0c0: cc66 6666 | 0f1f 8400 | 0000 0000 | 6666 6690 | 8984 2400 | 90ff ff55 | 4883 ec70 | 488b 5a30 
+  0x000001373a73f0e0: 448b 5228 | 4489 5424 | 288b 7210 | 8b7a 2044 | 8b6a 1848 | 8bca 49ba | 009b b473 | fe7f 0000 
+  0x000001373a73f100: 41ff d248 | 85db 0f84 | 0404 0000 | 448b 5308 
+
+  0x000001373a73f110: ;   {metadata('jeuxEchecs/Piece'[][])}
+  0x000001373a73f110: 4181 fa70 | 3400 010f | 8537 0600 | 0045 33c9 | b9ff ffff | ffeb 4741 | bbf6 ffff | ffbd 0a00 
+  0x000001373a73f130: 0000 450f | b642 0c45 | 85c0 440f | 45dd 4403 
+
+  0x000001373a73f140: ;   {oop(a 'jeuxEchecs/TypePiece'{0x00000000c2ef6598})}
+  0x000001373a73f140: df81 f898 | 65ef c20f | 8464 0100 | 0041 8bfb | 468b 54ab | 1045 8b5a | 0c4d 8b97 | 8003 0000 
+  0x000001373a73f160: ; ImmutableOopMap {rbx=Oop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerPlateau@102 (line 50)
+                      ;   {poll}
+  0x000001373a73f160: ffc6 4185 | 0241 3bf3 | 0f8d d600 | 0000 8b53 | 0c44 3bea | 0f83 9d03 | 0000 468b | 5cab 1045 
+  0x000001373a73f180: 8b53 0c41 | 3bf2 0f83 | bc03 0000 | 458b 54b3 | 1045 85d2 
+
+  0x000001373a73f194: ;   {oop(a 'java/lang/Class'{0x00000000c2ef6490} = 'jeuxEchecs/IA')}
+  0x000001373a73f194: 74ba 49bb | 9064 efc2 | 0000 0000 | 458b 5b70 
+
+  0x000001373a73f1a4: ; implicit exception: dispatches to 0x000001373a73f7b4
+  0x000001373a73f1a4: 418b 6b0c | 418b 4214 
+
+  0x000001373a73f1ac: ; implicit exception: dispatches to 0x000001373a73f7a8
+  0x000001373a73f1ac: 448b 400c | 443b c50f | 83d2 0300 | 0047 8b5c | 8310 4183 | fb06 0f84 | 5fff ffff | 4183 fb03 
+  0x000001373a73f1cc: 7510 41bb | ceff ffff | bd32 0000 | 00e9 54ff | ffff 4183 | fb03 7d30 | 4183 fb01 | 741a 4183 
+  0x000001373a73f1ec: fb01 0f8c | 2805 0000 | 41bb a6ff | ffff bd5a | 0000 00e9 | 2eff ffff | 41bb 7cfc | ffff bd84 
+  0x000001373a73f20c: 0300 00e9 | 1eff ffff | 4183 fb05 | 7d10 41bb | e2ff ffff | bd1e 0000 | 00e9 08ff | ffff 4183 
+  0x000001373a73f22c: fb06 0f8f | f003 0000 | 41bb e2ff | ffff bd1e | 0000 00e9 | eefe ffff | 458b d541 | ffc2 443b 
+  0x000001373a73f24c: d20f 8d26 | 0200 0044 | 3bd2 0f83 | 6c03 0000 | 468b 4493 | 1045 8b58 | 0c45 85db | 0f86 2002 
+  0x000001373a73f26c: 0000 33f6 | 458b eae9 | f6fe ffff | 660f 7ed3 | e91e 0100 | 00ff c14d | 8b8f 8003 
+
+  0x000001373a73f288: ; ImmutableOopMap {r10=NarrowOop xmm0=Oop xmm1=Oop }
+                      ;*if_icmple {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerSecuriteRoi@107 (line 119)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+                      ;   {poll}
+  0x000001373a73f288: 0000 4185 | 0183 f901 | 7e77 418b | fb66 480f | 7ec3 448b | 6c24 4c66 | 410f 7ed1 | 660f 7ed9 
+  0x000001373a73f2a8: 8b54 2420 | e99f feff | ff85 d20f | 8627 0400 | 008b 4310 
+
+  0x000001373a73f2bc: ; implicit exception: dispatches to 0x000001373a73f6e0
+  0x000001373a73f2bc: 448b 700c | 8954 2420 | 660f 6ed9 | 6641 0f6e | d144 896c | 244c 6648 | 0f6e c34d | 63ce 4863 
+  0x000001373a73f2dc: c648 8bd8 | 48ff cb49 | 3bd9 0f83 | e803 0000 | 488b d048 | 83c2 0149 | 3bd1 0f83 | df03 0000 
+  0x000001373a73f2fc: 4d8b ca66 | 490f 6ec9 | b9ff ffff | ff85 c975 | 0b41 b9ff | ffff ffe9 | b400 0000 | 448b c944 
+  0x000001373a73f31c: 034c 244c | 6648 0f7e | c746 8b6c | 8f10 418b | 7d0c 4863 | ff48 3bdf | 0f83 a602 | 0000 483b 
+  0x000001373a73f33c: d70f 839d | 0200 0044 | 3b4c 2420 | 0f83 33ff | ffff 458b | 4cb5 0c45 | 85c9 740e | 410f b669 
+  0x000001373a73f35c: 0c41 3be8 | 0f85 b300 | 0000 458b | 4cb5 1045 | 85c9 740e | 410f b669 | 0c41 3be8 | 0f85 fafe 
+  0x000001373a73f37c: ffff 458b | 4c85 1445 | 85c9 0f84 | f5fe ffff | 410f b669 | 0c41 3be8 | 0f84 e7fe | ffff bb01 
+  0x000001373a73f39c: 0000 0066 | 0f6e dbeb | 7445 33c9 | 0f1f 8400 | 0000 0000 | 498b 8f80 | 0300 0041 
+
+  0x000001373a73f3b8: ; ImmutableOopMap {r10=NarrowOop xmm0=Oop xmm1=Oop }
+                      ;*if_icmple {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerSecuriteRoi@98 (line 120)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+                      ;   {poll}
+  0x000001373a73f3b8: ffc1 8501 | 4183 f901 | 7e0a b901 | 0000 00e9 | b7fe ffff | 4585 c974 | d48b 4c24 | 4c85 c97c 
+  0x000001373a73f3d8: d73b 4c24 | 207d d141 | 8bf9 03fe | 413b fe0f | 83a3 0200 | 0066 480f | 7ec5 8b6c | 8d10 8b4d 
+  0x000001373a73f3f8: 0c3b f90f | 835b 0200 | 008b 7cbd | 1085 ff74 | a70f b66f | 0c41 3be8 | 749e 6641 | 0f6e d933 
+  0x000001373a73f418: c9ba 45ff | ffff 448b | 4c24 4c44 | 8954 2434 | 4489 5c24 | 3889 7424 | 3c44 894c | 2440 f20f 
+  0x000001373a73f438: 1144 2448 | 894c 2450 | f30f 115c | 2454 4489 
+
+  0x000001373a73f448: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f448: 4424 58e8 
+
+  0x000001373a73f44c: ; ImmutableOopMap {[52]=NarrowOop [72]=Oop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerSecuriteRoi@86 (line 131)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+  0x000001373a73f44c: b078 a8ff | 418b ea3b | ea7d 223b | ea0f 836c | 0100 0044 | 8b5c ab10 
+
+  0x000001373a73f464: ; implicit exception: dispatches to 0x000001373a73f7ec
+  0x000001373a73f464: 458b 530c | 4585 d20f | 860b 0100 | 0044 8bd5 | e9f5 fdff | ff8b c748 | 83c4 705d 
+
+  0x000001373a73f480: ;   {poll_return}
+  0x000001373a73f480: 493b a778 | 0300 000f | 8777 0300 | 00c3 458b | dd41 83c3 | 0245 85db | 450f 4cd9 | 443b da44 
+  0x000001373a73f4a0: 0f4f da41 | ffc2 453b | d30f 8ca4 | fdff ff44 | 3bd2 7d9c | 458b c242 | 8b74 8310 
+
+  0x000001373a73f4bc: ; implicit exception: dispatches to 0x000001373a73f7ec
+  0x000001373a73f4bc: 8b46 0c85 | c076 0845 | 8bd0 e9a3 | fdff ff8b | f241 2bf2 | 413b d241 | 0f4c f141 | bbe8 0300 
+  0x000001373a73f4dc: 0081 fee8 | 0300 0041 | 0f47 f341 | 03f2 418b | e8ff c53b | ee7d 0544 | 8bc5 ebbf | 4d8b af80 
+  0x000001373a73f4fc: ; ImmutableOopMap {rbx=Oop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerPlateau@102 (line 50)
+                      ;   {poll}
+  0x000001373a73f4fc: 0300 0041 | 8545 003b | ea0f 8d48 | ffff ff44 | 8bd5 eba4 | 33db e906 | fcff ffba | e4ff ffff 
+  0x000001373a73f51c: 4889 4424 | f88b 4424 | 2889 4424 | 2048 8b44 | 24f8 897c | 2424 8974 | 242c 4889 | 5c24 3044 
+  0x000001373a73f53c: 896c 2438 
+
+  0x000001373a73f540: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f540: 6666 90e8 
+
+  0x000001373a73f544: ; ImmutableOopMap {[48]=Oop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@15 (line 51)
+  0x000001373a73f544: b877 a8ff | bae4 ffff | ff48 8beb | 4889 4424 | f88b 4424 | 2889 4424 | 2048 8b44 | 24f8 897c 
+  0x000001373a73f564: 2424 4489 | 6c24 2844 | 895c 2430 | 8974 2434 
+
+  0x000001373a73f574: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f574: 6666 90e8 
+
+  0x000001373a73f578: ; ImmutableOopMap {rbp=Oop [48]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@18 (line 51)
+  0x000001373a73f578: 8477 a8ff | ffc5 3bea | 0f8c d1fe | ffff e9ee | feff ffba | e4ff ffff | 488b eb48 | 8944 24f8 
+  0x000001373a73f598: 8b44 2428 | 8944 2420 | 488b 4424 | f889 7c24 | 2444 896c | 2428 8974 | 242c 4489 | 5424 3044 
+  0x000001373a73f5b8: 895c 2434 | 4489 4424 
+
+  0x000001373a73f5c0: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f5c0: 3866 90e8 
+
+  0x000001373a73f5c4: ; ImmutableOopMap {rbp=Oop [48]=NarrowOop [52]=NarrowOop }
+                      ;*iaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::valeurPiece@10 (line 68)
+                      ; - jeuxEchecs.IA::evaluerPlateau@28 (line 53)
+  0x000001373a73f5c4: 3877 a8ff | 418b eaba | e4ff ffff | 897c 242c | 4889 5c24 
+
+  0x000001373a73f5d8: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f5d8: 3066 90e8 
+
+  0x000001373a73f5dc: ; ImmutableOopMap {[48]=Oop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@100 (line 50)
+  0x000001373a73f5dc: 2077 a8ff | babe ffff | ff66 480f | 7ec5 4889 | 4424 f88b | 4424 2889 | 4424 2048 | 8b44 24f8 
+  0x000001373a73f5fc: 448b 4c24 | 4c44 8954 | 242c 4489 | 5c24 3089 | 7424 3444 | 894c 2438 | 4489 4424 | 3c89 4c24 
+  0x000001373a73f61c: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f61c: 4866 90e8 
+
+  0x000001373a73f620: ; ImmutableOopMap {rbp=Oop [44]=NarrowOop }
+                      ;*if_icmple {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerSecuriteRoi@98 (line 120)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+  0x000001373a73f620: dc76 a8ff | ba45 ffff | ff48 8beb | 4889 4424 | f88b 4424 | 2889 4424 | 2048 8b44 | 24f8 897c 
+  0x000001373a73f640: 2424 4489 | 6c24 2889 | 7424 2c44 | 8954 2430 | 4489 5c24 
+
+  0x000001373a73f654: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f654: 3466 90e8 
+
+  0x000001373a73f658: ; ImmutableOopMap {rbp=Oop [48]=NarrowOop }
+                      ;*tableswitch {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::valeurPiece@11 (line 68)
+                      ; - jeuxEchecs.IA::evaluerPlateau@28 (line 53)
+  0x000001373a73f658: a476 a8ff | bae4 ffff | ff8b 4c24 | 4c44 8954 | 2434 4489 | 5c24 3889 | 7424 3c89 | 4c24 40f2 
+  0x000001373a73f678: 0f11 4424 | 4844 8944 | 2444 4489 | 4c24 5089 
+
+  0x000001373a73f688: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f688: 7c24 54e8 
+
+  0x000001373a73f68c: ; ImmutableOopMap {rbp=NarrowOop [52]=NarrowOop [72]=Oop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerSecuriteRoi@72 (line 128)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+  0x000001373a73f68c: 7076 a8ff | bae5 ffff | ff66 480f | 7ec5 4889 | 4424 f88b | 4424 2889 | 4424 2048 | 8b44 24f8 
+  0x000001373a73f6ac: 4489 5424 | 2c44 895c | 2430 8974 | 2434 894c | 2438 4489 | 4424 3c44 | 894c 2448 | 897c 2454 
+  0x000001373a73f6cc: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f6cc: 6666 90e8 
+
+  0x000001373a73f6d0: ; ImmutableOopMap {rbp=Oop [44]=NarrowOop }
+                      ;*iflt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerSecuriteRoi@54 (line 127)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+  0x000001373a73f6d0: 2c76 a8ff | 6648 0f7e | c3eb 0566 | 480f 7ec3 | babe ffff | ff48 8944 | 24f8 8b44 | 2428 8944 
+  0x000001373a73f6f0: 2420 488b | 4424 f844 | 8954 242c | 4489 5c24 | 3089 7424 | 3444 896c | 2438 4889 | 5c24 4044 
+  0x000001373a73f710: 8944 243c 
+
+  0x000001373a73f714: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f714: 6666 90e8 
+
+  0x000001373a73f718: ; ImmutableOopMap {[44]=NarrowOop [64]=Oop }
+                      ;*if_icmple {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::evaluerSecuriteRoi@107 (line 119)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+  0x000001373a73f718: e475 a8ff | ba45 ffff | ff48 8beb | 4889 4424 | f88b 4424 | 2889 4424 | 2048 8b44 | 24f8 897c 
+  0x000001373a73f738: 2424 4489 | 6c24 2889 | 7424 2c44 | 8954 2430 | 4489 5c24 
+
+  0x000001373a73f74c: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f74c: 3466 90e8 
+
+  0x000001373a73f750: ; ImmutableOopMap {rbp=Oop [48]=NarrowOop }
+                      ;*tableswitch {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::valeurPiece@11 (line 68)
+                      ; - jeuxEchecs.IA::evaluerPlateau@28 (line 53)
+  0x000001373a73f750: ac75 a8ff | ba8d ffff | ff48 8beb | 4889 4424 | f88b 4424 | 2889 4424 | 2048 8b44 | 24f8 897c 
+  0x000001373a73f770: 2424 4489 | 6c24 2889 
+
+  0x000001373a73f778: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f778: 7424 2ce8 
+
+  0x000001373a73f77c: ; ImmutableOopMap {rbp=Oop }
+                      ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@13 (line 51)
+  0x000001373a73f77c: 8075 a8ff | baf6 ffff | ff41 8bed 
+
+  0x000001373a73f788: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f788: 6666 90e8 
+
+  0x000001373a73f78c: ; ImmutableOopMap {}
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@15 (line 51)
+  0x000001373a73f78c: 7075 a8ff | baf6 ffff 
+
+  0x000001373a73f794: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f794: ff8b eee8 
+
+  0x000001373a73f798: ; ImmutableOopMap {}
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@18 (line 51)
+  0x000001373a73f798: 6475 a8ff | baf6 ffff 
+
+  0x000001373a73f7a0: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f7a0: ff66 90e8 
+
+  0x000001373a73f7a4: ; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@101 (line 50)
+  0x000001373a73f7a4: 5875 a8ff | baf6 ffff 
+
+  0x000001373a73f7ac: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f7ac: ff66 90e8 
+
+  0x000001373a73f7b0: ; ImmutableOopMap {}
+                      ;*invokevirtual ordinal {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::valeurPiece@7 (line 68)
+                      ; - jeuxEchecs.IA::evaluerPlateau@28 (line 53)
+  0x000001373a73f7b0: 4c75 a8ff | ba45 ffff | ff48 8beb | 4889 4424 | f88b 4424 | 2889 4424 | 2048 8b44 | 24f8 897c 
+  0x000001373a73f7d0: 2424 4489 | 6c24 2889 | 7424 2c44 | 8954 2434 | 4489 5c24 
+
+  0x000001373a73f7e4: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f7e4: 3c66 90e8 
+
+  0x000001373a73f7e8: ; ImmutableOopMap {rbp=Oop [52]=NarrowOop [60]=NarrowOop }
+                      ;*ifnull {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) jeuxEchecs.IA::$SWITCH_TABLE$jeuxEchecs$TypePiece@4 (line 5)
+                      ; - jeuxEchecs.IA::valeurPiece@0 (line 68)
+                      ; - jeuxEchecs.IA::evaluerPlateau@28 (line 53)
+  0x000001373a73f7e8: 1475 a8ff | baf6 ffff 
+
+  0x000001373a73f7f0: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f7f0: ff66 90e8 
+
+  0x000001373a73f7f4: ; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerPlateau@101 (line 50)
+  0x000001373a73f7f4: 0875 a8ff | baf6 ffff 
+
+  0x000001373a73f7fc: ;   {runtime_call UncommonTrapBlob}
+  0x000001373a73f7fc: ff8b efe8 
+
+  0x000001373a73f800: ; ImmutableOopMap {}
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - jeuxEchecs.IA::evaluerSecuriteRoi@72 (line 128)
+                      ; - jeuxEchecs.IA::evaluerPlateau@73 (line 58)
+  0x000001373a73f800: fc74 a8ff 
+
+  0x000001373a73f804: ;   {internal_word}
+  0x000001373a73f804: 49ba 80f4 | 733a 3701 | 0000 4d89 | 9790 0300 
+
+  0x000001373a73f814: ;   {runtime_call SafepointBlob}
+  0x000001373a73f814: 00e9 6681 | a8ff f4f4 | f4f4 f4f4 
+[Exception Handler]
+  0x000001373a73f820: ;   {no_reloc}
+  0x000001373a73f820: e95b bda9 | ffe8 0000 | 0000 4883 
+
+  0x000001373a73f82c: ;   {runtime_call DeoptimizationBlob}
+  0x000001373a73f82c: 2c24 05e9 | 6c7a a8ff | f4f4 f4f4 
+[/MachCode]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001374c310c70, length=17, elements={
+0x0000013729579650, 0x000001372957ad80, 0x00000137467ddfb0, 0x00000137467df8f0,
+0x00000137467e0220, 0x00000137467e0b50, 0x00000137467e37c0, 0x00000137468529d0,
+0x00000137468558a0, 0x00000137295515b0, 0x000001374acaf6a0, 0x000001374acff1a0,
+0x000001374ae89610, 0x000001374ae8c610, 0x000001374afbc090, 0x000001374afb9b60,
+0x000001374afb8b70
+}
+
+Java Threads: ( => current thread )
+  0x0000013729579650 JavaThread "Reference Handler" daemon [_thread_blocked, id=11416, stack(0x0000002d10a00000,0x0000002d10b00000)]
+  0x000001372957ad80 JavaThread "Finalizer" daemon [_thread_blocked, id=11056, stack(0x0000002d10b00000,0x0000002d10c00000)]
+  0x00000137467ddfb0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7316, stack(0x0000002d10c00000,0x0000002d10d00000)]
+  0x00000137467df8f0 JavaThread "Attach Listener" daemon [_thread_blocked, id=11536, stack(0x0000002d10d00000,0x0000002d10e00000)]
+  0x00000137467e0220 JavaThread "Service Thread" daemon [_thread_blocked, id=5492, stack(0x0000002d10e00000,0x0000002d10f00000)]
+  0x00000137467e0b50 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=1548, stack(0x0000002d10f00000,0x0000002d11000000)]
+  0x00000137467e37c0 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=8544, stack(0x0000002d11000000,0x0000002d11100000)]
+  0x00000137468529d0 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=11452, stack(0x0000002d11100000,0x0000002d11200000)]
+  0x00000137468558a0 JavaThread "Sweeper thread" daemon [_thread_blocked, id=9092, stack(0x0000002d11200000,0x0000002d11300000)]
+  0x00000137295515b0 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=6412, stack(0x0000002d11300000,0x0000002d11400000)]
+  0x000001374acaf6a0 JavaThread "Notification Thread" daemon [_thread_blocked, id=824, stack(0x0000002d11400000,0x0000002d11500000)]
+  0x000001374acff1a0 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=2024, stack(0x0000002d11600000,0x0000002d11700000)]
+  0x000001374ae89610 JavaThread "AWT-Shutdown" [_thread_blocked, id=6220, stack(0x0000002d11700000,0x0000002d11800000)]
+  0x000001374ae8c610 JavaThread "AWT-Windows" daemon [_thread_in_native, id=7768, stack(0x0000002d11800000,0x0000002d11900000)]
+  0x000001374afbc090 JavaThread "TimerQueue" daemon [_thread_blocked, id=4580, stack(0x0000002d11e00000,0x0000002d11f00000)]
+=>0x000001374afb9b60 JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=5860, stack(0x0000002d11f00000,0x0000002d12000000)]
+  0x000001374afb8b70 JavaThread "DestroyJavaVM" [_thread_blocked, id=12224, stack(0x0000002d10300000,0x0000002d10400000)]
+
+Other Threads:
+  0x0000013729562220 VMThread "VM Thread" [stack: 0x0000002d10900000,0x0000002d10a00000] [id=9560]
+  0x000001374acb7bf0 WatcherThread "VM Periodic Task Thread" [stack: 0x0000002d11500000,0x0000002d11600000] [id=2880]
+  0x00000137294ea230 WorkerThread "GC Thread#0" [stack: 0x0000002d10400000,0x0000002d10500000] [id=2056]
+  0x000001374af69be0 WorkerThread "GC Thread#1" [stack: 0x0000002d11d00000,0x0000002d11e00000] [id=9756]
+  0x00000137294f3af0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000002d10500000,0x0000002d10600000] [id=9172]
+  0x00000137294f5d80 WorkerThread "G1 Conc#0" [stack: 0x0000002d10600000,0x0000002d10700000] [id=6636]
+  0x000001372953e120 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000002d10700000,0x0000002d10800000] [id=12248]
+  0x000001372953f4b0 ConcurrentGCThread "G1 Service" [stack: 0x0000002d10800000,0x0000002d10900000] [id=11808]
+
+Threads with active compile tasks:
+C2 CompilerThread0    11139 1062       4       jeuxEchecs.IA::minMax (243 bytes)
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000c2e00000, size: 978 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000800000000-0x0000000800c40000-0x0000000800c40000), size 12845056, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Compressed class space mapped at: 0x0000000801000000-0x0000000841000000, reserved size: 1073741824
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x100000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+ CPUs: 2 total, 2 available
+ Memory: 3911M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 62M
+ Heap Max Capacity: 978M
+ Pre-touch: Disabled
+ Parallel Workers: 2
+ Concurrent Workers: 1
+ Concurrent Refinement Workers: 2
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 63488K, used 6602K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 1 survivors (1024K)
+ Metaspace       used 7431K, committed 7680K, reserved 1114112K
+  class space    used 784K, committed 896K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x00000000c2e00000, 0x00000000c2f00000, 0x00000000c2f00000|100%| O|  |TAMS 0x00000000c2e00000, 0x00000000c2e00000| Untracked 
+|   1|0x00000000c2f00000, 0x00000000c3000000, 0x00000000c3000000|100%|HS|  |TAMS 0x00000000c2f00000, 0x00000000c2f00000| Complete 
+|   2|0x00000000c3000000, 0x00000000c30f3e00, 0x00000000c3100000| 95%| O|  |TAMS 0x00000000c3000000, 0x00000000c3000000| Untracked 
+|   3|0x00000000c3100000, 0x00000000c3100000, 0x00000000c3200000|  0%| F|  |TAMS 0x00000000c3100000, 0x00000000c3100000| Untracked 
+|   4|0x00000000c3200000, 0x00000000c3200000, 0x00000000c3300000|  0%| F|  |TAMS 0x00000000c3200000, 0x00000000c3200000| Untracked 
+|   5|0x00000000c3300000, 0x00000000c3300000, 0x00000000c3400000|  0%| F|  |TAMS 0x00000000c3300000, 0x00000000c3300000| Untracked 
+|   6|0x00000000c3400000, 0x00000000c3400000, 0x00000000c3500000|  0%| F|  |TAMS 0x00000000c3400000, 0x00000000c3400000| Untracked 
+|   7|0x00000000c3500000, 0x00000000c3500000, 0x00000000c3600000|  0%| F|  |TAMS 0x00000000c3500000, 0x00000000c3500000| Untracked 
+|   8|0x00000000c3600000, 0x00000000c3600000, 0x00000000c3700000|  0%| F|  |TAMS 0x00000000c3600000, 0x00000000c3600000| Untracked 
+|   9|0x00000000c3700000, 0x00000000c3700000, 0x00000000c3800000|  0%| F|  |TAMS 0x00000000c3700000, 0x00000000c3700000| Untracked 
+|  10|0x00000000c3800000, 0x00000000c3800000, 0x00000000c3900000|  0%| F|  |TAMS 0x00000000c3800000, 0x00000000c3800000| Untracked 
+|  11|0x00000000c3900000, 0x00000000c3900000, 0x00000000c3a00000|  0%| F|  |TAMS 0x00000000c3900000, 0x00000000c3900000| Untracked 
+|  12|0x00000000c3a00000, 0x00000000c3a00000, 0x00000000c3b00000|  0%| F|  |TAMS 0x00000000c3a00000, 0x00000000c3a00000| Untracked 
+|  13|0x00000000c3b00000, 0x00000000c3b00000, 0x00000000c3c00000|  0%| F|  |TAMS 0x00000000c3b00000, 0x00000000c3b00000| Untracked 
+|  14|0x00000000c3c00000, 0x00000000c3c00000, 0x00000000c3d00000|  0%| F|  |TAMS 0x00000000c3c00000, 0x00000000c3c00000| Untracked 
+|  15|0x00000000c3d00000, 0x00000000c3d00000, 0x00000000c3e00000|  0%| F|  |TAMS 0x00000000c3d00000, 0x00000000c3d00000| Untracked 
+|  16|0x00000000c3e00000, 0x00000000c3e00000, 0x00000000c3f00000|  0%| F|  |TAMS 0x00000000c3e00000, 0x00000000c3e00000| Untracked 
+|  17|0x00000000c3f00000, 0x00000000c3f00000, 0x00000000c4000000|  0%| F|  |TAMS 0x00000000c3f00000, 0x00000000c3f00000| Untracked 
+|  18|0x00000000c4000000, 0x00000000c4000000, 0x00000000c4100000|  0%| F|  |TAMS 0x00000000c4000000, 0x00000000c4000000| Untracked 
+|  19|0x00000000c4100000, 0x00000000c4100000, 0x00000000c4200000|  0%| F|  |TAMS 0x00000000c4100000, 0x00000000c4100000| Untracked 
+|  20|0x00000000c4200000, 0x00000000c4200000, 0x00000000c4300000|  0%| F|  |TAMS 0x00000000c4200000, 0x00000000c4200000| Untracked 
+|  21|0x00000000c4300000, 0x00000000c4300000, 0x00000000c4400000|  0%| F|  |TAMS 0x00000000c4300000, 0x00000000c4300000| Untracked 
+|  22|0x00000000c4400000, 0x00000000c4400000, 0x00000000c4500000|  0%| F|  |TAMS 0x00000000c4400000, 0x00000000c4400000| Untracked 
+|  23|0x00000000c4500000, 0x00000000c4500000, 0x00000000c4600000|  0%| F|  |TAMS 0x00000000c4500000, 0x00000000c4500000| Untracked 
+|  24|0x00000000c4600000, 0x00000000c4600000, 0x00000000c4700000|  0%| F|  |TAMS 0x00000000c4600000, 0x00000000c4600000| Untracked 
+|  25|0x00000000c4700000, 0x00000000c4700000, 0x00000000c4800000|  0%| F|  |TAMS 0x00000000c4700000, 0x00000000c4700000| Untracked 
+|  26|0x00000000c4800000, 0x00000000c4800000, 0x00000000c4900000|  0%| F|  |TAMS 0x00000000c4800000, 0x00000000c4800000| Untracked 
+|  27|0x00000000c4900000, 0x00000000c4900000, 0x00000000c4a00000|  0%| F|  |TAMS 0x00000000c4900000, 0x00000000c4900000| Untracked 
+|  28|0x00000000c4a00000, 0x00000000c4a00000, 0x00000000c4b00000|  0%| F|  |TAMS 0x00000000c4a00000, 0x00000000c4a00000| Untracked 
+|  29|0x00000000c4b00000, 0x00000000c4b00000, 0x00000000c4c00000|  0%| F|  |TAMS 0x00000000c4b00000, 0x00000000c4b00000| Untracked 
+|  30|0x00000000c4c00000, 0x00000000c4c00000, 0x00000000c4d00000|  0%| F|  |TAMS 0x00000000c4c00000, 0x00000000c4c00000| Untracked 
+|  31|0x00000000c4d00000, 0x00000000c4d00000, 0x00000000c4e00000|  0%| F|  |TAMS 0x00000000c4d00000, 0x00000000c4d00000| Untracked 
+|  32|0x00000000c4e00000, 0x00000000c4e00000, 0x00000000c4f00000|  0%| F|  |TAMS 0x00000000c4e00000, 0x00000000c4e00000| Untracked 
+|  33|0x00000000c4f00000, 0x00000000c4f00000, 0x00000000c5000000|  0%| F|  |TAMS 0x00000000c4f00000, 0x00000000c4f00000| Untracked 
+|  34|0x00000000c5000000, 0x00000000c5000000, 0x00000000c5100000|  0%| F|  |TAMS 0x00000000c5000000, 0x00000000c5000000| Untracked 
+|  35|0x00000000c5100000, 0x00000000c5100000, 0x00000000c5200000|  0%| F|  |TAMS 0x00000000c5100000, 0x00000000c5100000| Untracked 
+|  36|0x00000000c5200000, 0x00000000c5200000, 0x00000000c5300000|  0%| F|  |TAMS 0x00000000c5200000, 0x00000000c5200000| Untracked 
+|  37|0x00000000c5300000, 0x00000000c5300000, 0x00000000c5400000|  0%| F|  |TAMS 0x00000000c5300000, 0x00000000c5300000| Untracked 
+|  38|0x00000000c5400000, 0x00000000c5400000, 0x00000000c5500000|  0%| F|  |TAMS 0x00000000c5400000, 0x00000000c5400000| Untracked 
+|  39|0x00000000c5500000, 0x00000000c5500000, 0x00000000c5600000|  0%| F|  |TAMS 0x00000000c5500000, 0x00000000c5500000| Untracked 
+|  40|0x00000000c5600000, 0x00000000c5600000, 0x00000000c5700000|  0%| F|  |TAMS 0x00000000c5600000, 0x00000000c5600000| Untracked 
+|  41|0x00000000c5700000, 0x00000000c5700000, 0x00000000c5800000|  0%| F|  |TAMS 0x00000000c5700000, 0x00000000c5700000| Untracked 
+|  42|0x00000000c5800000, 0x00000000c5800000, 0x00000000c5900000|  0%| F|  |TAMS 0x00000000c5800000, 0x00000000c5800000| Untracked 
+|  43|0x00000000c5900000, 0x00000000c5900000, 0x00000000c5a00000|  0%| F|  |TAMS 0x00000000c5900000, 0x00000000c5900000| Untracked 
+|  44|0x00000000c5a00000, 0x00000000c5a00000, 0x00000000c5b00000|  0%| F|  |TAMS 0x00000000c5a00000, 0x00000000c5a00000| Untracked 
+|  45|0x00000000c5b00000, 0x00000000c5b00000, 0x00000000c5c00000|  0%| F|  |TAMS 0x00000000c5b00000, 0x00000000c5b00000| Untracked 
+|  46|0x00000000c5c00000, 0x00000000c5c00000, 0x00000000c5d00000|  0%| F|  |TAMS 0x00000000c5c00000, 0x00000000c5c00000| Untracked 
+|  47|0x00000000c5d00000, 0x00000000c5d00000, 0x00000000c5e00000|  0%| F|  |TAMS 0x00000000c5d00000, 0x00000000c5d00000| Untracked 
+|  48|0x00000000c5e00000, 0x00000000c5e00000, 0x00000000c5f00000|  0%| F|  |TAMS 0x00000000c5e00000, 0x00000000c5e00000| Untracked 
+|  49|0x00000000c5f00000, 0x00000000c5f7eb90, 0x00000000c6000000| 49%| S|CS|TAMS 0x00000000c5f00000, 0x00000000c5f00000| Complete 
+|  50|0x00000000c6000000, 0x00000000c6000000, 0x00000000c6100000|  0%| F|  |TAMS 0x00000000c6000000, 0x00000000c6000000| Untracked 
+|  51|0x00000000c6100000, 0x00000000c6100000, 0x00000000c6200000|  0%| F|  |TAMS 0x00000000c6100000, 0x00000000c6100000| Untracked 
+|  52|0x00000000c6200000, 0x00000000c6200000, 0x00000000c6300000|  0%| F|  |TAMS 0x00000000c6200000, 0x00000000c6200000| Untracked 
+|  53|0x00000000c6300000, 0x00000000c6300000, 0x00000000c6400000|  0%| F|  |TAMS 0x00000000c6300000, 0x00000000c6300000| Untracked 
+|  54|0x00000000c6400000, 0x00000000c6400000, 0x00000000c6500000|  0%| F|  |TAMS 0x00000000c6400000, 0x00000000c6400000| Untracked 
+|  55|0x00000000c6500000, 0x00000000c6500000, 0x00000000c6600000|  0%| F|  |TAMS 0x00000000c6500000, 0x00000000c6500000| Untracked 
+|  56|0x00000000c6600000, 0x00000000c6600000, 0x00000000c6700000|  0%| F|  |TAMS 0x00000000c6600000, 0x00000000c6600000| Untracked 
+|  57|0x00000000c6700000, 0x00000000c6700000, 0x00000000c6800000|  0%| F|  |TAMS 0x00000000c6700000, 0x00000000c6700000| Untracked 
+|  58|0x00000000c6800000, 0x00000000c6870538, 0x00000000c6900000| 43%| E|  |TAMS 0x00000000c6800000, 0x00000000c6800000| Complete 
+|  59|0x00000000c6900000, 0x00000000c6a00000, 0x00000000c6a00000|100%| E|CS|TAMS 0x00000000c6900000, 0x00000000c6900000| Complete 
+|  60|0x00000000c6a00000, 0x00000000c6b00000, 0x00000000c6b00000|100%| E|CS|TAMS 0x00000000c6a00000, 0x00000000c6a00000| Complete 
+|  61|0x00000000c6b00000, 0x00000000c6c00000, 0x00000000c6c00000|100%| E|CS|TAMS 0x00000000c6b00000, 0x00000000c6b00000| Complete 
+
+Card table byte_map: [0x0000013742220000,0x0000013742410000] _byte_map_base: 0x0000013741c09000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x00000137294eb780, (CMBitMap*) 0x00000137294eb7c0
+ Prev Bits: [0x0000013742600000, 0x0000013743548000)
+ Next Bits: [0x0000013743550000, 0x0000013744498000)
+
+Polling page: 0x0000013729290000
+
+Metaspace:
+
+Usage:
+  Non-class:      6.49 MB used.
+      Class:    784.42 KB used.
+       Both:      7.26 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,       6.62 MB ( 10%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,     896.00 KB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,       7.50 MB ( <1%) committed. 
+
+Chunk freelists:
+   Non-Class:  1008.00 KB
+       Class:  3.10 MB
+        Both:  4.09 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: on
+MetaspaceReclaimPolicy: balanced
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - new_chunks_are_fully_committed: 0.
+ - uncommit_free_chunks: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 152.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 120.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 0.
+num_chunks_taken_from_freelist: 170.
+num_chunk_merges: 0.
+num_chunk_splits: 118.
+num_chunks_enlarged: 77.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=120064Kb used=336Kb max_used=336Kb free=119728Kb
+ bounds [0x000001373a6f0000, 0x000001373a960000, 0x0000013741c30000]
+CodeHeap 'profiled nmethods': size=120000Kb used=1870Kb max_used=1870Kb free=118129Kb
+ bounds [0x0000013732c30000, 0x0000013732ea0000, 0x000001373a160000]
+CodeHeap 'non-nmethods': size=5696Kb used=1349Kb max_used=1367Kb free=4346Kb
+ bounds [0x000001373a160000, 0x000001373a3d0000, 0x000001373a6f0000]
+ total_blobs=1654 nmethods=1058 adapters=508
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 10.932 Thread 0x00000137467e37c0 nmethod 1048 0x000001373a73e290 code [0x000001373a73e420, 0x000001373a73e7b8]
+Event: 10.932 Thread 0x00000137467e37c0 1050 %     4       jeuxEchecs.IA::evaluerPlateau @ 13 (116 bytes)
+Event: 10.933 Thread 0x00000137468529d0 1054       3       jeuxEchecs.Piece::mouvementValideFou (215 bytes)
+Event: 10.933 Thread 0x00000137468529d0 nmethod 1054 0x0000013732e00e90 code [0x0000013732e010c0, 0x0000013732e01918]
+Event: 10.939 Thread 0x00000137468529d0 1055       3       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject::doSignal (54 bytes)
+Event: 10.939 Thread 0x00000137468529d0 nmethod 1055 0x0000013732e01c90 code [0x0000013732e01e60, 0x0000013732e02218]
+Event: 10.939 Thread 0x00000137468529d0 1056   !   3       java.lang.ref.NativeReferenceQueue::enqueue (20 bytes)
+Event: 10.940 Thread 0x00000137468529d0 nmethod 1056 0x0000013732e02390 code [0x0000013732e02540, 0x0000013732e02768]
+Event: 10.954 Thread 0x00000137467e37c0 nmethod 1050% 0x000001373a73ef10 code [0x000001373a73f0c0, 0x000001373a73f838]
+Event: 10.954 Thread 0x00000137467e37c0 1057       4       jeuxEchecs.Piece::mouvementValideFou (215 bytes)
+Event: 10.959 Thread 0x00000137467e37c0 nmethod 1057 0x000001373a73fe10 code [0x000001373a73ffa0, 0x000001373a740358]
+Event: 10.959 Thread 0x00000137467e37c0 1061       4       jeuxEchecs.IA::evaluerPlateau (116 bytes)
+Event: 10.976 Thread 0x00000137467e37c0 nmethod 1061 0x000001373a740710 code [0x000001373a7408c0, 0x000001373a740f58]
+Event: 10.976 Thread 0x00000137467e37c0 1051       4       jeuxEchecs.IA::evaluerSecuriteRoi (113 bytes)
+Event: 10.984 Thread 0x00000137467e37c0 nmethod 1051 0x000001373a741490 code [0x000001373a741620, 0x000001373a741918]
+Event: 10.984 Thread 0x00000137467e37c0 1049 %     4       jeuxEchecs.Piece::getMouvementsValides @ 20 (78 bytes)
+Event: 10.990 Thread 0x00000137468529d0 1064       3       jeuxEchecs.IA::evaluerSecuriteRoi (113 bytes)
+Event: 10.990 Thread 0x00000137468529d0 nmethod 1064 0x0000013732e02890 code [0x0000013732e02a60, 0x0000013732e02f78]
+Event: 10.990 Thread 0x00000137468529d0 1065       3       jeuxEchecs.IA::evaluerPlateau (116 bytes)
+Event: 10.991 Thread 0x00000137468529d0 nmethod 1065 0x0000013732e03190 code [0x0000013732e03380, 0x0000013732e03898]
+
+GC Heap History (6 events):
+Event: 0.674 GC heap before
+{Heap before GC invocations=0 (full 0):
+ garbage-first heap   total 63488K, used 6144K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 0 survivors (0K)
+ Metaspace       used 5057K, committed 5248K, reserved 1114112K
+  class space    used 534K, committed 640K, reserved 1048576K
+}
+Event: 0.684 GC heap after
+{Heap after GC invocations=1 (full 0):
+ garbage-first heap   total 63488K, used 2009K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 1 young (1024K), 1 survivors (1024K)
+ Metaspace       used 5057K, committed 5248K, reserved 1114112K
+  class space    used 534K, committed 640K, reserved 1048576K
+}
+Event: 10.934 GC heap before
+{Heap before GC invocations=1 (full 0):
+ garbage-first heap   total 63488K, used 8153K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 1 survivors (1024K)
+ Metaspace       used 7430K, committed 7680K, reserved 1114112K
+  class space    used 784K, committed 896K, reserved 1048576K
+}
+Event: 10.938 GC heap after
+{Heap after GC invocations=2 (full 0):
+ garbage-first heap   total 63488K, used 3588K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 1 young (1024K), 1 survivors (1024K)
+ Metaspace       used 7430K, committed 7680K, reserved 1114112K
+  class space    used 784K, committed 896K, reserved 1048576K
+}
+Event: 10.979 GC heap before
+{Heap before GC invocations=2 (full 0):
+ garbage-first heap   total 63488K, used 14852K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 12 young (12288K), 1 survivors (1024K)
+ Metaspace       used 7431K, committed 7680K, reserved 1114112K
+  class space    used 784K, committed 896K, reserved 1048576K
+}
+Event: 10.982 GC heap after
+{Heap after GC invocations=3 (full 0):
+ garbage-first heap   total 63488K, used 3530K [0x00000000c2e00000, 0x0000000100000000)
+  region size 1024K, 1 young (1024K), 1 survivors (1024K)
+ Metaspace       used 7431K, committed 7680K, reserved 1114112K
+  class space    used 784K, committed 896K, reserved 1048576K
+}
+
+Dll operation events (9 events):
+Event: 0.009 Loaded shared library C:\Program Files\Java\jdk-19\bin\java.dll
+Event: 0.023 Loaded shared library C:\Program Files\Java\jdk-19\bin\jsvml.dll
+Event: 0.110 Loaded shared library C:\Program Files\Java\jdk-19\bin\net.dll
+Event: 0.112 Loaded shared library C:\Program Files\Java\jdk-19\bin\nio.dll
+Event: 0.220 Loaded shared library C:\Program Files\Java\jdk-19\bin\jimage.dll
+Event: 0.252 Loaded shared library C:\Program Files\Java\jdk-19\bin\awt.dll
+Event: 0.551 Loaded shared library C:\Program Files\Java\jdk-19\bin\zip.dll
+Event: 0.862 Loaded shared library C:\Program Files\Java\jdk-19\bin\freetype.dll
+Event: 0.864 Loaded shared library C:\Program Files\Java\jdk-19\bin\fontmanager.dll
+
+Deoptimization events (20 events):
+Event: 10.989 Thread 0x000001374afb9b60 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001373a740c8c relative=0x00000000000003cc
+Event: 10.989 Thread 0x000001374afb9b60 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001373a740c8c method=jeuxEchecs.IA.evaluerSecuriteRoi(II[[LjeuxEchecs/Piece;Z)I @ 86 c2
+Event: 10.989 Thread 0x000001374afb9b60 DEOPT PACKING pc=0x000001373a740c8c sp=0x0000002d11ffe6a0
+Event: 10.989 Thread 0x000001374afb9b60 DEOPT UNPACKING pc=0x000001373a1c6d9d sp=0x0000002d11ffe580 mode 2
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: trap_request=0xffffffbe fr.pc=0x000001373a741880 relative=0x0000000000000260
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: reason=profile_predicate action=maybe_recompile pc=0x000001373a741880 method=jeuxEchecs.IA.evaluerSecuriteRoi(II[[LjeuxEchecs/Piece;Z)I @ 98 c2
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT PACKING pc=0x000001373a741880 sp=0x0000002d11ffe600
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT UNPACKING pc=0x000001373a1c6d9d sp=0x0000002d11ffe578 mode 2
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: trap_request=0xffffffbe fr.pc=0x000001373a741880 relative=0x0000000000000260
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: reason=profile_predicate action=maybe_recompile pc=0x000001373a741880 method=jeuxEchecs.IA.evaluerSecuriteRoi(II[[LjeuxEchecs/Piece;Z)I @ 98 c2
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT PACKING pc=0x000001373a741880 sp=0x0000002d11ffe5f0
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT UNPACKING pc=0x000001373a1c6d9d sp=0x0000002d11ffe568 mode 2
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: trap_request=0xffffffbe fr.pc=0x000001373a741880 relative=0x0000000000000260
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: reason=profile_predicate action=maybe_recompile pc=0x000001373a741880 method=jeuxEchecs.IA.evaluerSecuriteRoi(II[[LjeuxEchecs/Piece;Z)I @ 98 c2
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT PACKING pc=0x000001373a741880 sp=0x0000002d11ffe5f0
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT UNPACKING pc=0x000001373a1c6d9d sp=0x0000002d11ffe568 mode 2
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: trap_request=0xffffffbe fr.pc=0x000001373a741880 relative=0x0000000000000260
+Event: 10.990 Thread 0x000001374afb9b60 Uncommon trap: reason=profile_predicate action=maybe_recompile pc=0x000001373a741880 method=jeuxEchecs.IA.evaluerSecuriteRoi(II[[LjeuxEchecs/Piece;Z)I @ 98 c2
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT PACKING pc=0x000001373a741880 sp=0x0000002d11ffe5f0
+Event: 10.990 Thread 0x000001374afb9b60 DEOPT UNPACKING pc=0x000001373a1c6d9d sp=0x0000002d11ffe568 mode 2
+
+Classes loaded (20 events):
+Event: 1.047 Loading class java/awt/Panel done
+Event: 1.047 Loading class java/applet/Applet done
+Event: 1.828 Loading class javax/swing/Timer$1
+Event: 1.829 Loading class javax/swing/Timer$1 done
+Event: 2.534 Loading class java/awt/ColorPaintContext
+Event: 2.534 Loading class java/awt/ColorPaintContext done
+Event: 6.987 Loading class javax/swing/event/ChangeEvent
+Event: 6.988 Loading class javax/swing/event/ChangeEvent done
+Event: 7.058 Loading class java/awt/LightweightDispatcher$2
+Event: 7.058 Loading class java/awt/LightweightDispatcher$2 done
+Event: 8.107 Loading class java/awt/event/ItemEvent
+Event: 8.108 Loading class java/awt/event/ItemEvent done
+Event: 8.109 Loading class sun/java2d/pipe/ShapeSpanIterator
+Event: 8.109 Loading class sun/java2d/pipe/SpanIterator
+Event: 8.109 Loading class sun/java2d/pipe/SpanIterator done
+Event: 8.109 Loading class sun/awt/geom/PathConsumer2D
+Event: 8.109 Loading class sun/awt/geom/PathConsumer2D done
+Event: 8.109 Loading class sun/java2d/pipe/ShapeSpanIterator done
+Event: 8.450 Loading class java/awt/event/MouseWheelEvent
+Event: 8.450 Loading class java/awt/event/MouseWheelEvent done
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (15 events):
+Event: 0.138 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c6a0e628}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.lang.Object, java.lang.Object)'> (0x00000000c6a0e628) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.225 Thread 0x00000137294a77d0 Exception <a 'sun/nio/fs/WindowsException'{0x00000000c6aac290}> (0x00000000c6aac290) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.232 Thread 0x00000137294a77d0 Exception <a 'java/lang/ClassNotFoundException'{0x00000000c6ab22a0}: sun/awt/resources/spi/awtProvider> (0x00000000c6ab22a0) 
+thrown [s\open\src\hotspot\share\classfile\systemDictionary.cpp, line 255]
+Event: 0.292 Thread 0x00000137294a77d0 Exception <a 'java/io/FileNotFoundException'{0x00000000c6909770}> (0x00000000c6909770) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.306 Thread 0x00000137294a77d0 Exception <a 'java/io/FileNotFoundException'{0x00000000c6935ef0}> (0x00000000c6935ef0) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.380 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c6973110}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object)'> (0x00000000c6973110) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.429 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c6805358}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c6805358) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.442 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c682fed0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c682fed0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.451 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c6861ae0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, int, java.lang.Object)'> (0x00000000c6861ae0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.499 Thread 0x00000137294a77d0 Exception <a 'java/lang/ClassNotFoundException'{0x00000000c671e260}: com/sun/swing/internal/plaf/metal/resources/spi/metalProvider> (0x00000000c671e260) 
+thrown [s\open\src\hotspot\share\classfile\systemDictionary.cpp, line 255]
+Event: 0.502 Thread 0x00000137294a77d0 Exception <a 'java/lang/ClassNotFoundException'{0x00000000c6722430}: com/sun/swing/internal/plaf/basic/resources/spi/basicProvider> (0x00000000c6722430) 
+thrown [s\open\src\hotspot\share\classfile\systemDictionary.cpp, line 255]
+Event: 0.520 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c6742260}: 'int java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object)'> (0x00000000c6742260) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.553 Thread 0x000001374aebac50 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c676bdd8}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object, int, int, int, int, int)'> (0x00000000c676bdd8) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.852 Thread 0x00000137294a77d0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c6a04238}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object)'> (0x00000000c6a04238) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.955 Thread 0x00000137294a77d0 Exception <a 'sun/nio/fs/WindowsException'{0x00000000c6a74470}> (0x00000000c6a74470) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+
+VM Operations (20 events):
+Event: 3.750 Executing VM operation: Cleanup
+Event: 3.750 Executing VM operation: Cleanup done
+Event: 4.761 Executing VM operation: Cleanup
+Event: 4.761 Executing VM operation: Cleanup done
+Event: 5.769 Executing VM operation: Cleanup
+Event: 5.769 Executing VM operation: Cleanup done
+Event: 6.783 Executing VM operation: Cleanup
+Event: 6.783 Executing VM operation: Cleanup done
+Event: 7.794 Executing VM operation: Cleanup
+Event: 7.794 Executing VM operation: Cleanup done
+Event: 8.796 Executing VM operation: Cleanup
+Event: 8.796 Executing VM operation: Cleanup done
+Event: 9.804 Executing VM operation: Cleanup
+Event: 9.804 Executing VM operation: Cleanup done
+Event: 10.818 Executing VM operation: Cleanup
+Event: 10.818 Executing VM operation: Cleanup done
+Event: 10.934 Executing VM operation: G1CollectForAllocation
+Event: 10.939 Executing VM operation: G1CollectForAllocation done
+Event: 10.979 Executing VM operation: G1CollectForAllocation
+Event: 10.982 Executing VM operation: G1CollectForAllocation done
+
+Events (20 events):
+Event: 0.050 Thread 0x00000137467e37c0 Thread added: 0x00000137467e37c0
+Event: 0.058 Thread 0x00000137468529d0 Thread added: 0x00000137468529d0
+Event: 0.060 Thread 0x00000137468558a0 Thread added: 0x00000137468558a0
+Event: 0.098 Thread 0x00000137295515b0 Thread added: 0x00000137295515b0
+Event: 0.187 Thread 0x000001374acaf6a0 Thread added: 0x000001374acaf6a0
+Event: 0.381 Thread 0x000001374acff1a0 Thread added: 0x000001374acff1a0
+Event: 0.383 Thread 0x000001374ae89610 Thread added: 0x000001374ae89610
+Event: 0.385 Thread 0x000001374ae8c610 Thread added: 0x000001374ae8c610
+Event: 0.546 Thread 0x000001374aebac50 Thread added: 0x000001374aebac50
+Event: 0.574 Thread 0x000001374aef16d0 Thread added: 0x000001374aef16d0
+Event: 0.608 Thread 0x000001374aef1e00 Thread added: 0x000001374aef1e00
+Event: 0.616 Thread 0x000001374af74550 Thread added: 0x000001374af74550
+Event: 0.805 Thread 0x000001374afbc090 Thread added: 0x000001374afbc090
+Event: 0.821 Thread 0x000001374afb9b60 Thread added: 0x000001374afb9b60
+Event: 1.007 Thread 0x00000137294a77d0 Thread exited: 0x00000137294a77d0
+Event: 1.007 Thread 0x000001374afb8b70 Thread added: 0x000001374afb8b70
+Event: 5.721 Thread 0x000001374aebac50 Thread exited: 0x000001374aebac50
+Event: 5.737 Thread 0x000001374aef16d0 Thread exited: 0x000001374aef16d0
+Event: 5.769 Thread 0x000001374aef1e00 Thread exited: 0x000001374aef1e00
+Event: 5.879 Thread 0x000001374af74550 Thread exited: 0x000001374af74550
+
+
+Dynamic libraries:
+0x00007ff71eec0000 - 0x00007ff71eed0000 	C:\Program Files\Java\jdk-19\bin\javaw.exe
+0x00007ffeb6890000 - 0x00007ffeb6a88000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffeb4ab0000 - 0x00007ffeb4b6d000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffeb3f70000 - 0x00007ffeb4266000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffeb44f0000 - 0x00007ffeb45f0000 	C:\windows\System32\ucrtbase.dll
+0x00007ffea5dc0000 - 0x00007ffea5dd8000 	C:\Program Files\Java\jdk-19\bin\jli.dll
+0x00007ffeb5e00000 - 0x00007ffeb5eaf000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffeb5bb0000 - 0x00007ffeb5c4e000 	C:\windows\System32\msvcrt.dll
+0x00007ffeb5120000 - 0x00007ffeb51bc000 	C:\windows\System32\sechost.dll
+0x00007ffea5d90000 - 0x00007ffea5dab000 	C:\Program Files\Java\jdk-19\bin\VCRUNTIME140.dll
+0x00007ffeb4f50000 - 0x00007ffeb5076000 	C:\windows\System32\RPCRT4.dll
+0x00007ffeb6600000 - 0x00007ffeb679e000 	C:\windows\System32\USER32.dll
+0x00007ffeb4830000 - 0x00007ffeb4852000 	C:\windows\System32\win32u.dll
+0x00007ffeb4b70000 - 0x00007ffeb4b9c000 	C:\windows\System32\GDI32.dll
+0x00007ffeb4270000 - 0x00007ffeb438a000 	C:\windows\System32\gdi32full.dll
+0x00007ffe98920000 - 0x00007ffe98bba000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007ffeb43e0000 - 0x00007ffeb447d000 	C:\windows\System32\msvcp_win.dll
+0x00007ffeac290000 - 0x00007ffeac29a000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffeb5dd0000 - 0x00007ffeb5e00000 	C:\windows\System32\IMM32.DLL
+0x00007ffeaabe0000 - 0x00007ffeaabec000 	C:\Program Files\Java\jdk-19\bin\vcruntime140_1.dll
+0x00007ffea46c0000 - 0x00007ffea474e000 	C:\Program Files\Java\jdk-19\bin\msvcp140.dll
+0x00007ffe73a80000 - 0x00007ffe74740000 	C:\Program Files\Java\jdk-19\bin\server\jvm.dll
+0x00007ffe45590000 - 0x00007ffe45599000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ffeb4ce0000 - 0x00007ffeb4d4b000 	C:\windows\System32\WS2_32.dll
+0x00007ffe97e00000 - 0x00007ffe97e27000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ffeb2810000 - 0x00007ffeb2822000 	C:\windows\SYSTEM32\kernel.appcore.dll
+0x00007ffeacd40000 - 0x00007ffeacd4a000 	C:\Program Files\Java\jdk-19\bin\jimage.dll
+0x00007ffeb24e0000 - 0x00007ffeb26c4000 	C:\windows\SYSTEM32\DBGHELP.DLL
+0x00007ffea6120000 - 0x00007ffea6154000 	C:\windows\SYSTEM32\dbgcore.DLL
+0x00007ffeb4860000 - 0x00007ffeb48e2000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffeac030000 - 0x00007ffeac056000 	C:\Program Files\Java\jdk-19\bin\java.dll
+0x00007ffea6c70000 - 0x00007ffea6d47000 	C:\Program Files\Java\jdk-19\bin\jsvml.dll
+0x00007ffeb5eb0000 - 0x00007ffeb65f4000 	C:\windows\System32\SHELL32.dll
+0x00007ffeb1d30000 - 0x00007ffeb24cb000 	C:\windows\SYSTEM32\windows.storage.dll
+0x00007ffeb5850000 - 0x00007ffeb5ba4000 	C:\windows\System32\combase.dll
+0x00007ffeb38e0000 - 0x00007ffeb390d000 	C:\windows\SYSTEM32\Wldp.dll
+0x00007ffeb67a0000 - 0x00007ffeb684d000 	C:\windows\System32\SHCORE.dll
+0x00007ffeb5630000 - 0x00007ffeb5685000 	C:\windows\System32\shlwapi.dll
+0x00007ffeb3ea0000 - 0x00007ffeb3ec5000 	C:\windows\SYSTEM32\profapi.dll
+0x00007ffeac010000 - 0x00007ffeac023000 	C:\Program Files\Java\jdk-19\bin\net.dll
+0x00007ffea7dc0000 - 0x00007ffea7eca000 	C:\windows\SYSTEM32\WINHTTP.dll
+0x00007ffeb3640000 - 0x00007ffeb36aa000 	C:\windows\system32\mswsock.dll
+0x00007ffeabf20000 - 0x00007ffeabf36000 	C:\Program Files\Java\jdk-19\bin\nio.dll
+0x00007ffe8dc70000 - 0x00007ffe8de01000 	C:\Program Files\Java\jdk-19\bin\awt.dll
+0x00007ffeb4e80000 - 0x00007ffeb4f4d000 	C:\windows\System32\OLEAUT32.dll
+0x00007ffeb0920000 - 0x00007ffeb09b0000 	C:\windows\SYSTEM32\apphelp.dll
+0x00007ffeb10e0000 - 0x00007ffeb110f000 	C:\windows\system32\DWMAPI.DLL
+0x00007ffeb0bd0000 - 0x00007ffeb0c6e000 	C:\windows\system32\uxtheme.dll
+0x00007ffe8e1e0000 - 0x00007ffe8e305000 	C:\windows\system32\opengl32.dll
+0x00007ffe9a340000 - 0x00007ffe9a36c000 	C:\windows\SYSTEM32\GLU32.dll
+0x00007ffeb5cb0000 - 0x00007ffeb5dc4000 	C:\windows\System32\MSCTF.dll
+0x00007ffeb4d50000 - 0x00007ffeb4e7b000 	C:\windows\System32\ole32.dll
+0x00007ffeaabf0000 - 0x00007ffeaac08000 	C:\Program Files\Java\jdk-19\bin\zip.dll
+0x00007ffe90b60000 - 0x00007ffe90be6000 	C:\Program Files\Java\jdk-19\bin\freetype.dll
+0x00007ffe8dba0000 - 0x00007ffe8dc66000 	C:\Program Files\Java\jdk-19\bin\fontmanager.dll
+0x00007ffea4290000 - 0x00007ffea438a000 	C:\windows\SYSTEM32\textinputframework.dll
+0x00007ffeb06b0000 - 0x00007ffeb07a2000 	C:\windows\System32\CoreMessaging.dll
+0x00007ffeb0350000 - 0x00007ffeb06ab000 	C:\windows\System32\CoreUIComponents.dll
+0x00007ffeb3090000 - 0x00007ffeb30c3000 	C:\windows\SYSTEM32\ntmarta.dll
+0x00007ffeafc30000 - 0x00007ffeafd85000 	C:\windows\SYSTEM32\wintypes.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-19\bin;C:\windows\SYSTEM32;C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;C:\Program Files\Java\jdk-19\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=C:\Users\ayaza\Desktop\Eclipse\JeuxEchecs\bin -XX:+ShowCodeDetailsInExceptionMessages -Djdk.module.main=JeuxEchecs 
+java_command: JeuxEchecs/jeuxEchecs.PlateauEchecsPanel
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 65011712                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1025507328                                {product} {ergonomic}
+   size_t MaxNewSize                               = 614465536                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5826188                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916026                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916026                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 1025507328                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:/Program Files/Java/jdk-19/bin/server;C:/Program Files/Java/jdk-19/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Python\Python310\Scripts\;C:\Python\Python310\;C:\Users\ayaza\AppData\Local\Microsoft\WindowsApps;C:\Users\ayaza\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ayaza\AppData\Local\GitHubDesktop\bin;C:\Users\ayaza\Desktop;
+USERNAME=ayaza
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 122 Stepping 8, GenuineIntel
+TMP=C:\Users\ayaza\AppData\Local\Temp
+TEMP=C:\Users\ayaza\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 0 days 0:43 hours
+
+CPU: total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 122 stepping 8 microcode 0x22, cx8, cmov, fxsr, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc, tscinvbit, aes, erms, clmul, sha, clflush, clflushopt, rdtscp, rdpid
+
+Memory: 4k page, system-wide physical 3911M (435M free)
+TotalPageFile size 7823M (AvailPageFile size 3378M)
+current process WorkingSet (physical memory assigned to process): 72M, peak: 72M
+current process commit charge ("private bytes"): 148M, peak: 148M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (19.0.2+7-44) for windows-amd64 JRE (19.0.2+7-44), built on 2022-11-30T18:02:09Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
